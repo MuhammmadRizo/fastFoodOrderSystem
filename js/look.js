@@ -26,7 +26,7 @@ async function getAllUsers() {
     customersList.innerHTML += `
         <li class="customer-item">
 	    	<span class="customer-name">${u.username}</span>
-	        <a class="customer-phone" href="tel:${u.telephone}">${u.telephone}</a>
+	      <a class="customer-phone" href="tel:${u.telephone}">${u.telephone}</a>
 	    </li>
     `;
   }
@@ -73,8 +73,8 @@ async function getAllFoods() {
   foodsSelect.innerHTML = null;
   for (const food of allFoods) {
     foodsSelect.innerHTML += `
-            <option value="${food.foodId}">${food.food_name}</option>
-        `;
+      <option value="${food.foodId}">${food.food_name}</option>
+    `;
   }
 
   window.localStorage.setItem("foodId", foodsSelect.value);
@@ -114,14 +114,14 @@ async function getAllOrderedFoods() {
   ordersList.innerHTML = "";
   for (const f of orderedFoods) {
     ordersList.innerHTML += `
-          <li class="order-item">
-          	<img src="https://look-njzu.onrender.com${f.foods[0].food_img}">
-          	<div>
-          		<span class="order-name">${f.foods[0].food_name}</span>
-          		<span class="order-count">${f.count}</span>
-          	</div>
-          </li>
-      `;
+      <li class="order-item">
+      	<img src="https://look-njzu.onrender.com${f.foods[0].food_img}">
+      	<div>
+      		<span class="order-name">${f.foods[0].food_name}</span>
+      		<span class="order-count">${f.count}</span>
+      	</div>
+      </li>
+    `;
   }
 }
 
